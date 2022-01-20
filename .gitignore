@@ -452,3 +452,10 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+##
+## Local database files
+##
+*.db
+*.db-shm
+*.db-wal

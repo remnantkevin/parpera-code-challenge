@@ -1,12 +1,14 @@
+using Parpera.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSqlite<TransactionContext>("Data Source=Parpera.db");
+
+builder.Services.AddScoped<TransactionRepository>();
 
 var app = builder.Build();
 
@@ -22,5 +24,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.SeedDatabase();
 
 app.Run();
