@@ -45,6 +45,7 @@ You can view the raw, auto-generated OpenAPI Specification (OAS) for the API at 
 - 🛠️ Tests still need to be added.
 - If I had more time I would add stricter validations that prevented incorrect values possibly being captured for `Transaction` properties (e.g. integers outside the range of the enum for `Status`).
 - I'd like to store the `Status` values in the database as strings rather than numbers so that their database values make sense even if application code is incorrectly changed or the values need to be shared with other services (internal or external).
+- I would use integers to represent the transaction amount in cents, and only format cents into something more human-readable when the amount is shown to the user. Using integers instead of decimals would avoid the accuracy problems related to floating point calculations.
 - I would implement authentication and/or authorisation.
 - If the requirement is that it is only the `Status` property that should be able to be updated, I would restrict the update endpoint to reflect this.
 - I would look into using async processing.
