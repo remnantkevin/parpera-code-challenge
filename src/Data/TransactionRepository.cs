@@ -13,17 +13,11 @@ public class TransactionRepository
 
     public IEnumerable<Transaction> GetAll()
     {
-        return _context.Transactions.AsNoTracking().OrderByDescending(t => t.CreatedAt).ToList();
+        return _context.Transactions.AsNoTracking().ToList();
     }
 
     public Transaction? Get(int id)
     {
         return _context.Transactions.Find(id);
-    }
-
-    public void UpdateStatus(Transaction transaction, Transaction.TransactionStatus status)
-    {
-        transaction.Status = status;
-        _context.SaveChanges();
     }
 }
