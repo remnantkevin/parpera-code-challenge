@@ -30,7 +30,6 @@ public static class DatabaseInitializer
                     Status = Transaction.TransactionStatus.Completed,
                     CreatedAt = new DateTime(2020, 4, 1, 12, 47, 23, DateTimeKind.Utc)
                 },
-                // 3 	2020-04-09'T'16:26:23Z 	Refund 	30.00 	Completed
                 new Transaction
                 {
                     Description = "Refund",
