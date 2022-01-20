@@ -28,7 +28,7 @@ The two main directories are:
 
 ## Setup instructions
 
-Install the .NET 6.0 SDK - specifically make sure you have .NET 6.0.1 and ASP.NET Core 6.0.1 installed. While the project may be comptabile with older versions of .NET, this has not been checked. You will also need SQLite to be available on your machine, as it is used to store the `Transaction` data. Also note that this project was imlemented on MacOS using VSCode; no other editors or OSes have been tested on.
+Install the .NET 6.0 SDK - specifically make sure you have .NET 6.0.1 and ASP.NET Core 6.0.1 installed. While the project may be compatible with older versions of .NET, this has not been checked. You will also need SQLite to be available on your machine, as it is used to store the `Transaction` data. Also note that this project was developed on MacOS using VSCode; no other editors or OSes have been tested on.
 
 Once .NET is installed:
 
@@ -44,7 +44,7 @@ You can view the raw, auto-generated OpenAPI Specification (OAS) for the API at 
 
 - 🛠️ Tests still need to be added.
 - If I had more time I would add stricter validations that prevented incorrect values possibly being captured for `Transaction` properties (e.g. integers outside the range of the enum for `Status`).
-- I'd like to store the `Status` values in the database as strings rather than numbers so that their database values make sense even if application code is incorrecly changed or the values need to be shared with other services (internal or external).
+- I'd like to store the `Status` values in the database as strings rather than numbers so that their database values make sense even if application code is incorrectly changed or the values need to be shared with other services (internal or external).
 - I would implement authentication and/or authorisation.
 - If the requirement is that it is only the `Status` property that should be able to be updated, I would restrict the update endpoint to reflect this.
 - I would look into using async processing.
