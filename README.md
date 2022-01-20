@@ -28,7 +28,7 @@ The two main directories are:
 
 ## Setup instructions
 
-Install the .NET 6.0 SDK - specifically make sure you have .NET 6.0.1 and ASP.NET Core 6.0.1 installed. While the project may be comptabile with older versions of .NET, this has not been checked. You will also need SQLite to be available on your machine, as it is used to store the `Transaction` data.
+Install the .NET 6.0 SDK - specifically make sure you have .NET 6.0.1 and ASP.NET Core 6.0.1 installed. While the project may be comptabile with older versions of .NET, this has not been checked. You will also need SQLite to be available on your machine, as it is used to store the `Transaction` data. Also note that this project was imlemented on MacOS using VSCode; no other editors or OSes have been tested on.
 
 Once .NET is installed:
 
