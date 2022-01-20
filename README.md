@@ -28,7 +28,7 @@ The two main directories are:
 
 ## Setup instructions
 
-Install the .NET 6.0 SDK - specifically make sure you have .NET 6.0.1 and ASP.NET Core 6.0.1 installed. While the project may be comptabile with older versions of .NET, this has not been checked.
+Install the .NET 6.0 SDK - specifically make sure you have .NET 6.0.1 and ASP.NET Core 6.0.1 installed. While the project may be comptabile with older versions of .NET, this has not been checked. You will also need SQLite to be available on your machine, as it is used to store the `Transaction` data.
 
 Once .NET is installed:
 
@@ -48,3 +48,4 @@ You can view the raw, auto-generated OpenAPI Specification (OAS) for the API at 
 - I would implement authentication and/or authorisation.
 - If the requirement is that it is only the `Status` property that should be able to be updated, I would restrict the update endpoint to reflect this.
 - I would look into using async processing.
+- I would use a MySQL or PostgreSQL database instead of SQLite.
