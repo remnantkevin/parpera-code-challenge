@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Parpera.Data;
 using Parpera.Models;
+using Parpera.Interfaces;
 
-public class TransactionRepository
+public class TransactionRepository : ITransactionRepository
 {
     private readonly TransactionContext _context;
 

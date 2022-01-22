@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Parpera.Models;
+using Parpera.Interfaces;
 
 namespace Parpera.Controllers;
 
@@ -8,9 +9,9 @@ namespace Parpera.Controllers;
 [Route("api/[controller]")]
 public class TransactionController : ControllerBase
 {
-    TransactionRepository _repository;
+    private readonly ITransactionRepository _repository;
 
-    public TransactionController(TransactionRepository repository)
+    public TransactionController(ITransactionRepository repository)
     {
         _repository = repository;
     }

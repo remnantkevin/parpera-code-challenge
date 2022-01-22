@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parpera", "src\Parpera.csproj", "{EFD1AB4C-2D3F-41B4-8682-16B42FE5A044}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "tests\Tests.csproj", "{0EAD4C67-DDA9-4B76-B8F5-F929E61FEF62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{EFD1AB4C-2D3F-41B4-8682-16B42FE5A044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFD1AB4C-2D3F-41B4-8682-16B42FE5A044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFD1AB4C-2D3F-41B4-8682-16B42FE5A044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EAD4C67-DDA9-4B76-B8F5-F929E61FEF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EAD4C67-DDA9-4B76-B8F5-F929E61FEF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EAD4C67-DDA9-4B76-B8F5-F929E61FEF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EAD4C67-DDA9-4B76-B8F5-F929E61FEF62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
