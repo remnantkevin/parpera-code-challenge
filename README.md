@@ -41,6 +41,10 @@ How you access the API endpoints will depend on whether you have set up [local h
 
 You can view the raw, auto-generated OpenAPI Specification (OAS) for the API at `https://localhost:<port>/swagger/v1/swagger.json`, or you can view the Swagger UI version of the OAS at `https://localhost:<port>/swagger`.
 
+## Running tests
+
+Run `dotnet test` from the repo's root directory or from the `tests` directory.
+
 ## Todos and caveats
 
 - Add unit tests for `TransactionRepository`.
