@@ -21,4 +21,9 @@ public class TransactionRepository : ITransactionRepository
     {
         return _context.Transactions.Find(id);
     }
+
+    public void SaveChanges()
+    {
+        _context.SaveChanges();
+    }
 }

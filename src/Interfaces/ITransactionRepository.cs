@@ -6,4 +6,5 @@ public interface ITransactionRepository
 {
     IEnumerable<Transaction> GetAll();
     Transaction? Get(int id);
+    void SaveChanges();
 }

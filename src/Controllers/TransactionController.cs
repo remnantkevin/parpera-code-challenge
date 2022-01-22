@@ -38,6 +38,8 @@ public class TransactionController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
+        _repository.SaveChanges();
+
         return new ObjectResult(transaction);
     }
 }
