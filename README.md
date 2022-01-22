@@ -49,6 +49,8 @@ Run `dotnet test` from the repo's root directory or from the `tests` directory.
 
 - Add unit tests for `TransactionRepository`.
 - Add integration/functional tests for retrieving all transactions, and updating a transaction.
+- Improve error handling for `Transaction` updates (e.g. handle errors that occur when changes are saved to the database).
+- Move some of the logic that is in the `Update` controller action into `TransactionRepository`.
 - Add stricter validations that prevent incorrect values possibly being captured for transaction properties (e.g. integers outside the range of the `TransactionStatus` enum).
 - If the requirement is that only the `Status` property should be able to be updated, I would restrict the `Update` endpoint to reflect this.
 - I would store `Status` values in the database as strings rather than numbers so that their database values make sense even if application code is incorrectly changed, or if the values need to be shared with other services (internal or external).
