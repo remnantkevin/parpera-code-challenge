@@ -1,4 +1,5 @@
 using Parpera.Data;
+using Parpera.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSqlite<TransactionContext>("Data Source=Parpera.db");
 
-builder.Services.AddScoped<TransactionRepository>();
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 
 var app = builder.Build();
 
