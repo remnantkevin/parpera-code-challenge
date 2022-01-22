@@ -26,18 +26,24 @@ public class TransactionContollerGetAll
     [Fact]
     public void ReturnsAllTransactions()
     {
+        // Process request
         var result = controller.GetAll();
 
+        // Test
         result.Should().HaveCount(testTransactions.Count);
     }
 
     [Fact]
     public void ReturnsAllTransactionsInReverseChronologicalOrder()
     {
+        // Process request
         var result = controller.GetAll();
 
+        // Test
         var orderedTransactions = GetTestTransactions().OrderByDescending(t => t.CreatedAt);
-        result.Should().BeEquivalentTo(orderedTransactions);
+        result
+            .Should()
+            .BeEquivalentTo(orderedTransactions, options => options.WithStrictOrdering());
     }
 
     // Helpers

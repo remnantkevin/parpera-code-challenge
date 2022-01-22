@@ -73,7 +73,7 @@ public class TransactionControllerUpdate
     }
 
     [Fact]
-    public void RespondWithNotFoundWhenNoTransactionHasProvidedId()
+    public void RespondsWithNotFoundWhenTransactionIsNotFound()
     {
         // Build request, repo, and controller
         var transactionId = 1;
@@ -81,7 +81,7 @@ public class TransactionControllerUpdate
         jsonPatchDocument.Replace((t) => t.Status, Transaction.TransactionStatus.Cancelled);
 
         var repoMock = new Mock<ITransactionRepository>();
-        repoMock.Setup(repo => repo.Get(transactionId)).Returns(value: null);
+        repoMock.Setup(repo => repo.Get(transactionId)).Returns(value: null); // no Transaction is found
 
         var controller = new TransactionController(repoMock.Object);
 
